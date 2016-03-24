@@ -1,0 +1,310 @@
+.main {
+    background: url('../img/bg/bg.jpg');
+    width: 100%;
+    height: 1140px;
+}
+
+section {
+    position:relative;
+}
+
+header {
+    height: 100px;
+    background: rgba(208,0,0,0.7);
+    border-bottom: 1px solid #000;
+}
+
+header h2 {
+    font-size:36px;
+    text-align:center;
+    padding:20px 0;
+    color:#eca400;
+    text-shadow: 3px 3px 3px rgba(130, 0, 0, 0.8);
+}
+
+header h2::selection {
+background: #1c1c1d; 
+}
+
+section .nav {
+    display:block;
+    width:820px;
+    margin:8% auto;
+    height:410px;
+    position:relative;
+    background:#000;
+}
+
+section .nav .block-menu {
+    width:25%;
+    height:50%;
+    display:inline-block;
+    position:relative;
+    float:left;
+    background:#000;
+    
+}
+
+
+section .nav .block-menu .block-menu-1 {
+    background: #1c1c1d;
+    height:100%;
+}
+
+section .nav .block-menu .block-menu-1:hover {
+    background: url('../img/bg/architecture_bg.jpg');
+    box-shadow: inset 0 0 0 105px rgba(0, 0, 0, 0.5);
+}
+
+section .nav .block-menu .block-menu-2 {
+    background: #d73600;
+    height:100%;
+}
+
+section .nav .block-menu .block-menu-2:hover {
+    background: url('../img/bg/making_choice_bg.jpg');
+    box-shadow: inset 0 0 0 105px rgba(0, 0, 0, 0.5);
+}
+
+section .nav .block-menu .block-menu-3 {
+    background: #eca400;
+    height:100%;
+}
+
+section .nav .block-menu .block-menu-3:hover {
+    background: url('../img/bg/concurrency_problems.jpg');
+    box-shadow: inset 0 0 0 105px rgba(0, 0, 0, 0.5);
+}
+
+section .nav .block-menu .block-menu-4 {
+    background: #eaf8bf;
+    height:100%;
+}
+
+section .nav .block-menu .block-menu-4:hover {
+    background: url('../img/bg/view_patterns.jpg');
+    box-shadow: inset 0 0 0 105px rgba(0, 0, 0, 0.5);
+}
+
+section .nav .block-menu .block-menu-5 {
+    background: #eca400;
+    height:100%;
+}
+
+section .nav .block-menu .block-menu-5:hover {
+    background: url('../img/bg/Optimistic_and_Pessimistic_Concurrency_Control.jpg');
+    box-shadow: inset 0 0 0 105px rgba(0, 0, 0, 0.5);
+}
+
+section .nav .block-menu .block-menu-6 {
+    background: #eaf8bf;
+    height:100%;
+}
+
+section .nav .block-menu .block-menu-6:hover {
+    background: url('../img/bg/session_state.jpg');
+    box-shadow: inset 0 0 0 105px rgba(0, 0, 0, 0.5);
+}
+
+section .nav .block-menu .block-menu-7 {
+    background: #d73600;
+    height:100%;
+}
+
+section .nav .block-menu .block-menu-7:hover {
+    background: url('../img/bg/Application_Server_Concurrency.jpg');
+    box-shadow: inset 0 0 0 105px rgba(0, 0, 0, 0.5);
+}
+
+section .nav .block-menu .block-menu-8 {
+    background: #1c1c1d;
+    height:100%;
+}
+
+section .nav .block-menu .block-menu-8:hover {
+    background: url('../img/bg/kinds_of_tnterprise_application_bg.jpg');
+    box-shadow: inset 0 0 0 105px rgba(0, 0, 0, 0.5);
+}
+
+section .nav .block-menu h3{
+    position:absolute;
+    display:block;
+    font-size: 24px;
+    text-align:center;
+    font-family: 'Arial', sans-serif;
+}
+
+section .nav .block-menu h3:hover {
+    color:#fff;
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* Стилі для написів в меню*/
+
+section .nav .block-menu .block-menu-1 h3 {
+    color:#eca400;
+    padding:40% 14%;
+}
+
+section .nav .block-menu .block-menu-2 h3 {
+    color:#fff;
+    padding: 20% 30% 10% 10%;
+    text-align: left;
+}
+
+section .nav .block-menu .block-menu-3 h3 {
+    color:#fff;
+    padding: 20% 5% 10% 20%;
+    text-align: right;
+}
+
+section .nav .block-menu .block-menu-4 h3 {
+    color:#ECA400;
+    padding: 20% 15% 10% 15%;
+    text-align: center;
+}
+
+section .nav .block-menu .block-menu-5 h3 {
+    color:#fff;
+    padding: 15% 5% 10% 5%;
+    text-align: center;
+}
+
+section .nav .block-menu .block-menu-6 h3 {
+    color:#ECA400;
+    padding: 65% 10% 5% 10%;
+    text-align: center;
+}
+
+section .nav .block-menu .block-menu-7 h3 {
+    color:#fff;
+    padding: 65% 10% 5% 10%;
+    text-align: center;
+}
+
+section .nav .block-menu .block-menu-8 h3 {
+    color:#eca400;
+    padding: 25% 5% 10% 5%;
+    text-align: center;
+}
+
+section .nav #circle {
+    width:250px;
+    height:250px;
+    border-radius:50%;
+    background-color:#1c1c1d;
+    z-index:100;
+    position:absolute;
+    top:20%;
+    left:35%;
+}
+
+section .nav #circle h1 {
+    display:block;
+    text-align:center;
+    padding:20% 0;
+    font-family: 'Times New Roman', sans-serif;
+    font-size: 30px;
+    color:#eca400;
+}
+
+section .nav #circle:hover {
+    background-color:#000;
+    transition:all 250ms ease;
+}
+
+/*Стилі для блоку "Виконавці"*/
+
+
+.performers {
+    display:block;
+    width:100%;
+    background: #eaf8bf;
+    padding-top: 50px;
+
+}
+
+.performers h2 {
+    display: block;
+    margin:0 auto;
+    padding-top: 50px;
+    text-align: center;
+	font-family: Arial, sans-serif;
+	font-size: 30px;
+    font-weight:bold;
+	background-color: #eca400;
+	width: 400px;
+	padding: 10px 5px;
+    text-transform: uppercase;
+    color:#000;
+}
+
+.photorow{
+	display: table;
+	margin: 0 auto;
+    padding:60px 0;
+}
+
+.photo{
+    margin: 10px 25px;
+    display: inline-block;
+	background:  #eca400;
+	width: 200px;
+	height: 200px;
+    border-radius:50%;
+}
+
+.photo-1:hover {
+    background: url('../img/person/img_1.jpg');
+    border-radius:50%;
+}
+
+.photo-2:hover {
+    background: url('../img/person/img_2.jpg');
+    border-radius:50%;
+}
+
+.photo-3:hover {
+    background: url('../img/person/img_3.jpg');
+    border-radius:50%;
+}
+
+.photo-4:hover {
+    background-color: rgba(0,0,0,0.0);
+    background: url('../img/person/img_4.jpg');
+    border-radius:50%;
+}
+
+.photorow h4 {
+    color: #000;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 43% 0%;
+    font-family: 'Arial', sans-serif;
+}
+
+.photorow h4:hover {
+    opacity:0;
+}
+
+/*Стилі для футера*/
+
+footer {
+    background:#d00000;
+    height:100px;
+}
+
+#copy {
+    margin:0 auto;
+    padding:35px 0;
+    text-align:center;
+    font-size: 18px;
+    font-weight: bold;
+    color:#eca400;
+    text-shadow: 0px 2px 5px #000;
+}
+
+
+
+
