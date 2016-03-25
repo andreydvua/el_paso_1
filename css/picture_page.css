@@ -3,6 +3,7 @@
     width: 100%;
     height: 750px;
 }
+/*Стилі для хідера*/
 header{
     height: 120px;
     background: #D73600 ;
@@ -16,8 +17,6 @@ header h2{
     text-shadow: 3px 3px 3px #1C1C1D;
 }
 .buttons{
-    display: table;
-    margin: 0 auto;
     margin-left: 100px;
 }
 .button{
@@ -35,6 +34,13 @@ header h2{
 .button h4{
     color: #EAF8BF;
 }
+.text{
+    display: inline-block;
+}
+.text h4{
+    color: #ECA400;
+} 
+/*Стилі для фото*/
 img {
     display: block;
     margin: 25px auto;
@@ -43,17 +49,20 @@ img {
 
 /*Стилі для футера*/
 
-footer {
+footer{
     background: #1C1C1D;
     height:100px;
 }
-
-#copy {
-    margin:0 auto;
-    padding:35px 0;
-    text-align:center;
-    font-size: 18px;
-    font-weight: bold;
+.footer{
+    padding:35px 0 35px 50px;
+}
+#el_paso{
     color: #EAF8BF;
-    text-shadow: 0px 2px 5px #000;
+}
+.footer #copy{
+    text-align:center;
+    color: #EAF8BF;
+}
+b {
+    color: #ECA400;
 }
