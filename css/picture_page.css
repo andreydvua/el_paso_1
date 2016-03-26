@@ -13,35 +13,43 @@ header h2{
 	color: #EAF8BF;
     font-size:36px;
     text-align:left;
-    padding:10px 100px;
+    padding:10px 50px;
     text-shadow: 3px 3px 3px #1C1C1D;
+    text-transform: uppercase;
 }
 .buttons{
-    margin-left: 100px;
+    margin-left: 50px;
+    display: inline-block;
 }
 .button{
     padding: 3px 8px;
     display: inline-block;
     border: 2px solid #D73600;
-    margin: 5px 50px 5px 5px;
+    margin: 5px 5px 5px 50px;
+    text-transform: uppercase;
 }
 .button:hover{
     padding: 3px 8px;
     display: inline-block;
     border: 2px solid #EAF8BF;
-    margin: 5px 50px 5px 5px;
+    margin: 5px 5px 5px 50px;
+	text-transform: uppercase;
 }
 .button h4{
     color: #EAF8BF;
 }
 .text{
+    margin-right: 10px;
     display: inline-block;
+    float: right;
+    padding: 10px 5px 0 5px;
 }
 .text h4{
     color: #ECA400;
+    padding: 5px 10px 0 0;
 } 
 /*Стилі для фото*/
-img {
+img{
     display: block;
     margin: 25px auto;
     border-radius: 2px;
@@ -54,15 +62,18 @@ footer{
     height:100px;
 }
 .footer{
-    padding:35px 0 35px 50px;
+    padding:35px 30px;
 }
 #el_paso{
     color: #EAF8BF;
+    float: left;
 }
 .footer #copy{
     text-align:center;
     color: #EAF8BF;
+    padding: 0 130px 0 0;
 }
-b {
+b{
     color: #ECA400;
+    text-transform: uppercase;
 }
