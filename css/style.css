@@ -26,6 +26,8 @@ header h2::selection {
 background: #1c1c1d; 
 }
 
+
+    
 section .nav {
     display:block;
     width:820px;
@@ -143,7 +145,7 @@ section .nav .block-menu h3:hover {
 
 section .nav .block-menu .block-menu-1 h3 {
     color:#eca400;
-    padding:40% 14%;
+    padding:40% 16%;
 }
 
 section .nav .block-menu .block-menu-2 h3 {
@@ -178,7 +180,7 @@ section .nav .block-menu .block-menu-6 h3 {
 
 section .nav .block-menu .block-menu-7 h3 {
     color:#fff;
-    padding: 65% 10% 5% 10%;
+    padding: 65% 5% 5% 15%;
     text-align: center;
 }
 
@@ -212,6 +214,7 @@ section .nav #circle:hover {
     background-color:#000;
     transition:all 250ms ease;
 }
+
 
 /*Стилі для блоку "Виконавці"*/
 
@@ -306,5 +309,173 @@ footer {
 }
 
 
+/*Налаштування адаптивності для меню*/
+
+@media screen and (min-width:720px) and (max-width:840px){
+    
+    header {
+    height: 70px;
+    background: rgba(208,0,0,0.7);
+    border-bottom: 1px solid #000;
+    }
+
+    header h2 {
+    font-size:30px;
+    text-align:center;
+    padding:10px 0;
+    color:#eca400;
+    text-shadow: 3px 3px 3px rgba(130, 0, 0, 0.8);
+    }
+    
+    section .nav {
+        width:700px;
+        height: 350px;
+    }
+    section .nav .block-menu h3{
+        position:absolute;
+        display:block;
+        font-size: 18px;
+        text-align:center;
+        font-family: 'Arial', sans-serif;
+    }
+    
+    section .nav #circle {
+        width:175px;
+        height:175px;
+        border-radius:50%;
+        background-color:#1c1c1d;
+        z-index:100;
+        position:absolute;
+        top:25%;
+        left:38%;
+    }
+
+    section .nav #circle h1 {
+        display:block;
+        text-align:center;
+        padding:25% 10%;
+        font-family: 'Times New Roman', sans-serif;
+        font-size: 20px;
+        color:#eca400;
+    }
+    
+    .performers .photorow {
+	display: table;
+	margin: 0 auto;
+    padding:5% 14%;
+    }
+    
+}
+
+@media screen and (min-width:640px) and (max-width:719px){
+         header {
+    height: 50px;
+    background: rgba(208,0,0,0.7);
+    border-bottom: 1px solid #000;
+    }
+
+    header h2 {
+    font-size:24px;
+    text-align:center;
+    padding:5px 0;
+    color:#eca400;
+    text-shadow: 3px 3px 3px rgba(130, 0, 0, 0.8);
+    }
+    
+    section .nav {
+        width:450px;
+        height: 225px;
+    }
+    
+    section .nav .block-menu h3{
+    position:absolute;
+    display:block;
+    font-size: 14px;
+    text-align:center;
+    font-family: 'Arial', sans-serif;
+    }
+    
+    section .nav #circle {
+        width:112px;
+        height:112px;
+        border-radius:50%;
+        background-color:#1c1c1d;
+        z-index:100;
+        position:absolute;
+        top:25%;
+        left:38%;
+    }
+
+    section .nav #circle h1 {
+        display:block;
+        text-align:center;
+        padding:20% 10%;
+        font-family: 'Times New Roman', sans-serif;
+        font-size: 16px;
+        color:#eca400;
+    }
+    
+       .performers .photorow {
+	display: table;
+	margin: 0 auto;
+    padding:5% 9%;
+    }
+}
+
+@media screen and (max-width:639px){
+    
+    header {
+    height: 50px;
+    background: rgba(208,0,0,0.7);
+    border-bottom: 1px solid #000;
+    }
+
+    header h2 {
+    font-size:24px;
+    text-align:center;
+    padding:5px 0;
+    color:#eca400;
+    text-shadow: 3px 3px 3px rgba(130, 0, 0, 0.8);
+    }
+    
+    section .nav {
+        width:450px;
+        height: 225px;
+    }
+    
+    section .nav .block-menu h3{
+    position:absolute;
+    display:block;
+    font-size: 14px;
+    text-align:center;
+    font-family: 'Arial', sans-serif;
+    }
+    
+    section .nav #circle {
+        width:112px;
+        height:112px;
+        border-radius:50%;
+        background-color:#1c1c1d;
+        z-index:100;
+        position:absolute;
+        top:25%;
+        left:38%;
+    }
+
+    section .nav #circle h1 {
+        display:block;
+        text-align:center;
+        padding:20% 10%;
+        font-family: 'Times New Roman', sans-serif;
+        font-size: 16px;
+        color:#eca400;
+    }
+    
+       .performers .photorow {
+	display: table;
+	margin: 0 auto;
+    padding:5% 25%;
+    }
+}
 
 
