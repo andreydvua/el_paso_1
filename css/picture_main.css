@@ -195,7 +195,7 @@ section .nav .block-menu .block-menu-4 h3 {
 
 section .nav .block-menu .block-menu-5 h3 {
     color:#d73600;
-    padding: 45% 5% 10% 20%;
+    padding: 35% 5% 10% 5%;
     text-align: center;
 }
 
@@ -242,9 +242,13 @@ b{
 }
 
 /*Стиль для адаптивності*/
-
-
-@media screen and (min-width:720px) and (max-width:840px){
+@media screen and (min-width:640px) and (max-width:840px){
+    .pic_main{
+    background-image:url('../img/background.png');
+    width: 100%;
+    height: 600px;
+    
+    }
     header{
     height: 105px;
     background: #D73600 ;
@@ -291,12 +295,112 @@ b{
     color: #ECA400;
     padding: 5px 10px 0 0;
     } 
+    section .nav {
+        width:620px;
+        height: 310px;
+    }
+    section .nav .block-menu h3{
+    position:absolute;
+    display:block;
+    font-size: 16px;
+    text-align:center;
+    font-family: 'Arial', sans-serif;
+    }
     footer{
     background: #1C1C1D;
     height:75px;
     }
     .footer{
-    padding:35px 30px;
+    padding:25px 30px;
+    }
+    #el_paso{
+    color: #EAF8BF;
+    float: left;
+    font-size:14px;
+    }
+    .footer #copy{
+    text-align:center;
+    color: #EAF8BF;
+    padding: 0 80px 0 0;
+    font-size:14px;
+    }
+    b{
+    color: #ECA400;
+    text-transform: uppercase;
+    }
+}
+
+
+@media screen and (min-width:120px) and (max-width:640px){
+    .pic_main{
+    background-image:url('../img/background.png');
+    width: 100%;
+    height: 450px;
+    min-width: 480px;
+    }
+    header{
+    height: 105px;
+    background: #D73600 ;
+    border-bottom: 1px solid #000;
+    }
+    header h2{
+    color: #EAF8BF;
+    font-size:28px;
+    text-align:left;
+    padding:10px 35px;
+    text-shadow: 3px 3px 3px #1C1C1D;
+    text-transform: uppercase;
+    }
+    .buttons{
+    margin-left: 35px;
+    display: inline-block;
+    }
+    .button{
+    padding: 3px 8px;
+    display: inline-block;
+    border: 2px solid #D73600;
+    margin: 0px 5px 5px 20px;
+    text-transform: uppercase;
+    font-size:14px;
+    }
+    .button:hover{
+    padding: 3px 8px;
+    display: inline-block;
+    border: 2px solid #EAF8BF;
+    margin: 0px 5px 5px 20px;
+    text-transform: uppercase;
+    }
+    .button h4{
+    color: #EAF8BF;
+    }
+    .text{
+    margin-right: 10px;
+    display: inline-block;
+    float: right;
+    padding: 10px 5px 0 5px;
+    font-size:14px;
+    }
+    .text h4{
+    color: #ECA400;
+    padding: 5px 10px 0 0;
+    } 
+    section .nav {
+        width:460px;
+        height: 230px;
+    }
+    section .nav .block-menu h3{
+    position:absolute;
+    display:block;
+    font-size: 14px;
+    text-align:center;
+    font-family: 'Arial', sans-serif;
+    }
+    footer{
+    background: #1C1C1D;
+    height:75px;
+    }
+    .footer{
+    padding:25px 30px;
     }
     #el_paso{
     color: #EAF8BF;
