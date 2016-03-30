@@ -13,7 +13,7 @@ header{
 }
 header h2{
 	color: #EAF8BF;
-    font-size:36px;
+    font-size:32px;
     text-align:left;
     padding:10px 50px;
     text-shadow: 3px 3px 3px #1C1C1D;
@@ -29,6 +29,7 @@ header h2{
     border: 2px solid #D73600;
     margin: 5px 5px 5px 50px;
     text-transform: uppercase;
+    font-size:16px;
 }
 .button:hover{
     padding: 3px 8px;
@@ -45,6 +46,7 @@ header h2{
     display: inline-block;
     float: right;
     padding: 10px 5px 0 5px;
+    font-size:16px;
 }
 .text h4{
     color: #ECA400;
@@ -169,49 +171,49 @@ section .nav .block-menu h3:hover {
 /* Стилі для написів в меню*/
 
 section .nav .block-menu .block-menu-1 h3 {
-    color:#eca400;
+    color:#d73600;
     padding:40% 16%;
 }
 
 section .nav .block-menu .block-menu-2 h3 {
-    color:#fff;
-    padding: 20% 30% 10% 10%;
+    color:#d73600;
+    padding: 15% 40% 10% 5%;
     text-align: left;
 }
 
 section .nav .block-menu .block-menu-3 h3 {
-    color:#fff;
-    padding: 20% 5% 10% 20%;
+    color:#eaf8bf;
+    padding: 45% 5% 10% 20%;
     text-align: right;
 }
 
 section .nav .block-menu .block-menu-4 h3 {
-    color:#ECA400;
-    padding: 20% 15% 10% 15%;
+    color:#d73600;
+    padding: 55% 15% 5% 15%;
     text-align: center;
 }
 
 section .nav .block-menu .block-menu-5 h3 {
-    color:#fff;
-    padding: 15% 5% 10% 5%;
+    color:#d73600;
+    padding: 45% 5% 10% 20%;
     text-align: center;
 }
 
 section .nav .block-menu .block-menu-6 h3 {
-    color:#ECA400;
-    padding: 65% 10% 5% 10%;
+    color:#eca400;
+    padding: 80% 10% 5% 10%;
     text-align: center;
 }
 
 section .nav .block-menu .block-menu-7 h3 {
-    color:#fff;
-    padding: 65% 5% 5% 15%;
+    color:#d73600;
+    padding: 30% 20% 10% 5%;
     text-align: center;
 }
 
 section .nav .block-menu .block-menu-8 h3 {
-    color:#eca400;
-    padding: 25% 5% 10% 5%;
+    color:#1c1c1d;
+    padding: 40% 15% 10% 25%;
     text-align: center;
 }
 
@@ -237,4 +239,78 @@ footer{
 b{
     color: #ECA400;
     text-transform: uppercase;
+}
+
+/*Стиль для адаптивності*/
+
+
+@media screen and (min-width:720px) and (max-width:840px){
+    header{
+    height: 105px;
+    background: #D73600 ;
+    border-bottom: 1px solid #000;
+    }
+    header h2{
+    color: #EAF8BF;
+    font-size:28px;
+    text-align:left;
+    padding:10px 35px;
+    text-shadow: 3px 3px 3px #1C1C1D;
+    text-transform: uppercase;
+    }
+    .buttons{
+    margin-left: 35px;
+    display: inline-block;
+    }
+    .button{
+    padding: 3px 8px;
+    display: inline-block;
+    border: 2px solid #D73600;
+    margin: 0px 5px 5px 20px;
+    text-transform: uppercase;
+    font-size:14px;
+    }
+    .button:hover{
+    padding: 3px 8px;
+    display: inline-block;
+    border: 2px solid #EAF8BF;
+    margin: 0px 5px 5px 20px;
+    text-transform: uppercase;
+    }
+    .button h4{
+    color: #EAF8BF;
+    }
+    .text{
+    margin-right: 10px;
+    display: inline-block;
+    float: right;
+    padding: 10px 5px 0 5px;
+    font-size:14px;
+    }
+    .text h4{
+    color: #ECA400;
+    padding: 5px 10px 0 0;
+    } 
+    footer{
+    background: #1C1C1D;
+    height:75px;
+    }
+    .footer{
+    padding:35px 30px;
+    }
+    #el_paso{
+    color: #EAF8BF;
+    float: left;
+    font-size:14px;
+    }
+    .footer #copy{
+    text-align:center;
+    color: #EAF8BF;
+    padding: 0 80px 0 0;
+    font-size:14px;
+    }
+    b{
+    color: #ECA400;
+    text-transform: uppercase;
+    }
 }
