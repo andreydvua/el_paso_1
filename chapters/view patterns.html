@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="description" content=""/>
+	<meta name="keywords" content=""/>
+	<title>Chapter_Name page</title>
+	<link rel="stylesheet" href="../css/reset.css"/>
+	<link rel="stylesheet" href="../css/chapter_style.css"/>
+</head>
+<body>
+		<div class="basic">  
+		<header>
+		<h2>Kinds of Enterprise Application</h2>
+		</header>
+		<section>
+			<div class="chapter">;
+			<a href="../index.html">
+					<div class="block-m">	
+						<div class="home">
+							<h3>Home</h3>
+						</div>
+					</div>		
+			</a>
+			<a href="../chapters/architecture.html"">			
+						<div class="block-m">
+							<div class="arch">
+							<h3>Architecture</h3>
+							</div>
+						</div>
+			</a>
+			<a href="../chapters/making a choise.html">
+						<div class="block-m">	
+							<div class="making">
+							<h3>Making a Choise</h3>
+							</div>
+						</div>	
+			</a>	
+			<a href="../chapters/view patterns.html">
+						<div class="block-m">
+							<div class="view">
+							<h3>View Patterns</h3>
+							</div>
+						</div>	
+			</a>
+			<a href="../chapters/concurency problems.html">
+						<div class="block-m">		
+							<div class="concurency">
+							<h3>Concurency Problems</h3>
+							</div>
+						</div>
+			</a>
+			<a href="../chapters/application server concurrency.html">
+						<div class="block-m">	
+							<div class="application">
+							<h3>Application Server Concurrency</h3>
+							</div>
+						</div>
+			</a>
+			<a href="../chapters/session state.html">													
+						<div class="block-m">
+							<div class="session">
+							<h3>Session State</h3>
+							</div>
+						</div>
+			</a>
+			<a href="../chapters/Optimistic and Pessimistic Concurrency.html">			
+						<div class="block-m">	
+							<div class="optimistic">
+							<h3>Optimistic and Pessimistic Concurrency</h3>
+							</div>
+						</div>
+			</a>
+			</div>
+			<br>
+			<p><span>View Patterns</span></p>
+			<br>
+			<p>
+On the view side there are three patterns to think about: Transform View(361), Template View(350),and
+Two Step View(365).These give rise to essentially two choices: whether to use Transform View(361)or
+Template View(350),and whether either of them uses one stage or a Two Step View(365).The basic
+patterns for Transform View(361)and Template View(350)are single stage. Two Step View(365)is a
+variation you can apply to either.
+I'll start with the choice between Template View(350)and Transform View(361). Template View(350)
+allows you write the presentation in the structure of the page and embed markers into the page to indicate
+where dynamic content needs to go. Quite a few popular platforms are based on this pattern, many of which
+are the server pages technologies (ASP, JSP, PHP) that allow you to put a full programming language into
+the page. This clearly provides a lot of power and flexibility; sadly, it also leads to very messy code that's
+difficult to maintain. As a result if you use server page technology you must be very disciplined to keep
+programming logic out of the page structure, often by using a helper object.
+The Transform View(361)uses a transform style of program. The usual example is XSLT. This can be very
+effective if you're working with domain data that's in XML format or can easily be converted to it. An input
+controller picks the appropriate XSLT stylesheet and applies it to XML gleaned from the model.
+If you use procedural scripts as your view, you can write the code in the style of either  Transform View(361)
+or Template View(350)or in some interesting mix of the two. I've noticed that most scripts follow one of
+these two patterns as their main form.
+The second decision is whether to be single stage (see Figure 4.2)  or to use Two Step View(365).
+A singlestage view mostly has one view component for each screen in the application. The view takes domain
+oriented data and renders it in HTML. I say "mostly" because similar logical screens may share views. Even
+so, most of the time you can think of it as one view per screen.<p/>
+			<h4>Figure 4.2. A single-stage view</h4>
+			<img src="../pictures/view_1.png" height="405" width="566">
+			<p> A two-stage view ( Figure 4.3)  breaks this process into two stages, producing a logical screen from the
+domain data and then rendering it in HTML. There's one first-stage view for each screen but only one
+second-stage view for the whole application.</p>
+			<h4>Figure 4.3. A two-stage view</h4>
+			<img src="../pictures/view_2.png" height="405" width="566">
+			<p> The advantage of the Two Step View(365)is that it puts the decision of what HTML to use in a single place.
+This makes global changes to the HTML easy since there's only one object to alter in order to alter every
+screen on the site. Of course, you only get that advantage if your logical presentation stays the same, so it
+works best with sites where different screens use the same basic layout. Highly design intensive sites won't
+be able to come up with a good logical screen structure.</p>
+			<p>Two Step View(365)works even better if you have a Web application where its services are being used by
+multiple front-end customers, such as multiple airlines fronting the same basic reservation system. Within
+the limits of the logical screen, each front end can have a different appearance by using a different second
+stage. In a similar way you can use a Two Step View(365)to handle different output devices, with separate
+second stages for a regular Web browser and for a palmtop. Again, the limitation is that you can have the
+two share a common logical screen, which may not be possible if the UIs are very different, such as in a
+browser and a cell phone.</p>
+		</div>	
+		</section>																									<!--Footer-->    
+	<footer>
+       <div id="copy">
+          Copyright @ 2016 | Design: EL_PASO
+       </div> 
+    </footer>    	
+</body>
+</html>

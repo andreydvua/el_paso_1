@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="description" content=""/>
+	<meta name="keywords" content=""/>
+	<title>Chapter_Name page</title>
+	<link rel="stylesheet" href="../css/reset.css"/>
+	<link rel="stylesheet" href="../css/chapter_style.css"/>
+</head>
+<body>
+		<div class="basic">  
+		<header>
+		<h2>Kinds of Enterprise Application</h2>
+		</header>
+		<section>
+			<div class="chapter">;
+			<a href="../index.html">
+					<div class="block-m">	
+						<div class="home">
+							<h3>Home</h3>
+						</div>
+					</div>		
+			</a>
+			<a href="../chapters/architecture.html"">			
+						<div class="block-m">
+							<div class="arch">
+							<h3>Architecture</h3>
+							</div>
+						</div>
+			</a>
+			<a href="../chapters/making a choise.html">
+						<div class="block-m">	
+							<div class="making">
+							<h3>Making a Choise</h3>
+							</div>
+						</div>	
+			</a>	
+			<a href="../chapters/view patterns.html">
+						<div class="block-m">
+							<div class="view">
+							<h3>View Patterns</h3>
+							</div>
+						</div>	
+			</a>
+			<a href="../chapters/concurency problems.html">
+						<div class="block-m">		
+							<div class="concurency">
+							<h3>Concurency Problems</h3>
+							</div>
+						</div>
+			</a>
+			<a href="../chapters/application server concurrency.html">
+						<div class="block-m">	
+							<div class="application">
+							<h3>Application Server Concurrency</h3>
+							</div>
+						</div>
+			</a>
+			<a href="../chapters/session state.html">													
+						<div class="block-m">
+							<div class="session">
+							<h3>Session State</h3>
+							</div>
+						</div>
+			</a>
+			<a href="../chapters/Optimistic and Pessimistic Concurrency.html">			
+						<div class="block-m">	
+							<div class="optimistic">
+							<h3>Optimistic and Pessimistic Concurrency</h3>
+							</div>
+						</div>
+			</a>
+			</div>
+			<br>
+			<p><span>Concurrency Problems</span></p>
+			<br>
+			<p>We'll start by going through the essential problems of concurrency. We call them essential because they're
+the fundamental problems that concurrency control systems try to prevent. They aren't the only problems of
+concurrency, because the control mechanisms often create a new set of problems in their solutions!
+However, they do focus on the essential point of concurrency control.<p/>
+			<p>Lost updatesare the simplest idea to understand. Say Martin edits a file to make some changes to the
+checkConcurrencymethod—a task that takes a few minutes. While he's doing this David alters the
+updateImportantParametermethod in the same file. David starts and finishes his alteration very quickly,
+so quickly that, even though he starts after Martin, he finishes before him. This is unfortunate. When Martin
+read the file it didn't include David's update, so when Martin writes the file it writes over the version that
+David updated and David's update is lost forever.</p>
+			<p>An inconsistent readoccurs when you read two things that are correct pieces of information but not correct
+at the same time. Say Martin wishes to know how many classes are in the concurrency package, which
+contains two subpackages for locking and multiphase. Martin looks in the locking package and sees seven
+classes. At this point he gets a phone call from Roy on some abstruse question. While Martin's answering the
+phone, David finishes dealing with that pesky bug in the four-phase lock code and adds two classes to the
+locking package and three classes to the five that were in the multiphase package. His phone call over,
+Martin looks in the multiphase package to see how many classes there are and sees eight, producing a grand
+total of fifteen.</p>
+			<p>Sadly, fifteen classes was never the right answer. The correct answer was twelve before David's update and
+seventeen afterward. Either answer would have been correct, even if not current, but fifteen was never
+correct. This problem is called an inconsistent read because the data that Martin read was inconsistent.
+Both of these problems cause a failure of correctness(or safety), and they result in incorrect behavior that
+would not have occurred without two people trying to work with the same data at the same time. However, if
+correctness were the only issue, these problems wouldn't be that serious. After all, we can arrange things so
+that only one of us can work the data at one time. While this helps with correctness, it reduces the ability to
+do things concurrently. The essential problem of any concurrent programming is that it's not enough to
+worry about correctness; you also have to worry about liveness: how much concurrent activity can go on.
+Often people need to sacrifice some correctness to gain more liveness, depending on the seriousness and
+likelihood of the failures and the need for people to work on their data concurrently.<p/>
+			<p>These aren't all the problems you get with concurrency, but we think of these as the basic ones. To solve
+them we use various control mechanisms. Alas, there's no free lunch. The solutions introduce problems of
+their own, although these problems are less serious than the basic ones. Still, this does bring up an
+important point: If you can tolerate the problems, you can avoid any form of concurrency control. This is
+rare, but occasionally you find circumstances that permit it.<p/>
+		</div>	
+		</section>																									<!--Footer-->    
+	<footer>
+       <div id="copy">
+          Copyright @ 2016 | Design: EL_PASO
+       </div> 
+    </footer>    	
+</body>
+</html>
