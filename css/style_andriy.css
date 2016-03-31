@@ -1,0 +1,251 @@
+header {
+	padding: 2% 0;
+	background-color: rgba(208,0,0, 0.5);
+	text-align: center;
+}
+
+header h2{
+	text-shadow: 0 0 5px #000;
+	font-size: 30px;
+	font-weight: bold;
+}
+.main{
+	padding-bottom: 45px;
+	background: url('../img/header_bg.jpg') no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+/*----------------------navigation----------------------*/
+nav{
+	display: table;
+	position: relative;
+	width: 85%;
+	height: 100px;
+	margin: 65px auto;
+}
+
+.row{
+	display: table-row;
+}
+
+.box{
+	display: table-cell;
+	width: 25%;
+}
+
+nav .row .box h3{
+	margin: 80px 0;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+}
+span{
+	display: inline-block;
+	color: inherit;
+}
+
+/*------------Black block------------*/
+nav .row .black{
+	background-color: #1c1c1d;
+  
+}
+nav .row .black h3{
+	color: #eca400;
+	text-shadow: 0 0 2px #1c1c1d;
+}
+nav .top .black:hover{
+	background-image: url('../img/bg/architecture_bg.jpg');
+  box-shadow: inset 0 0 0 155px rgba(0, 0, 0, 0.5);
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+nav .bottom .black:hover{
+	background-image: url('../img/bg/session_state.jpg');
+  box-shadow: inset 0 0 0 155px rgba(0, 0, 0, 0.5);
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+/*-----------------------------------*/
+
+/*-------------Red block-------------*/
+nav .row .red{
+	background-color: #d00000;
+}
+nav .row .red h3{
+	color: #eaf8bf;
+}
+nav .top .red:hover{
+	background: url('../img/bg/making_choice_bg.jpg');
+  box-shadow: inset 0 0 0 155px rgba(0, 0, 0, 0.5);
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+nav .bottom .red:hover{
+	background: url('../img/bg/Application_Server_Concurrency.jpg');
+  box-shadow: inset 0 0 0 155px rgba(0, 0, 0, 0.5);
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+/*-----------------------------------*/
+
+/*------------Yellow block-----------*/
+nav .row .yellow{
+	background-color: #eca400;
+}
+nav .row .yellow h3{
+	color: #1c1c1d;
+	text-shadow: 0 0 3px #ccc;
+}
+nav .top .yellow:hover{
+	background: url('../img/bg/making_choice_bg.jpg');
+  box-shadow: inset 0 0 0 155px rgba(255, 255, 255, 0.5);
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+nav .bottom .yellow:hover{
+	background: url('../img/bg/Optimistic_and_Pessimistic_Concurrency_Control.jpg');
+  box-shadow: inset 0 0 0 155px rgba(255, 255, 255, 0.5);
+  -webkit-background-size: cover;
+  background-size: cover;
+  color: #eca400;
+}
+/*-----------------------------------*/
+
+/*------------Cream block------------*/
+nav .row .cream{
+	background-color: #eaf8bf;
+}
+nav .row .cream h3{
+	color: #d00000;
+}
+nav .top .cream:hover{
+	background: url('../img/bg/view_patterns.jpg');
+  box-shadow: inset 0 0 0 155px rgba(0, 0, 0, 0.4);;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+nav .bottom .cream:hover{
+	background: url('../img/bg/concurrency_problems.jpg');
+  box-shadow: inset 0 0 0 155px rgba(0, 0, 0, 0.5);;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+/*-----------------------------------*/
+
+/*-----------Circle block------------*/
+nav .circle{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 216px;
+	height: 216px;
+	margin: -108px 0 0 -108px;
+	border-radius: 50%;
+	background-color: rgba(28,28,29, 0.65);
+}
+nav .circle h1{
+	margin-top: 60px;
+	padding: 4%;
+	color: #eaf8bf;
+	text-align: center;
+	text-transform: uppercase;
+	text-shadow: 0 0 5px #eca400;
+}
+/*----------------------------------------------*/
+/*--------------SECTION PERFORMERS--------------*/
+section{
+	display: block;
+	width: 100%;
+	background: #eaf8bf;
+	padding-top: 50px;
+}
+section h2 {
+	display: block;
+	margin:0 auto;
+	padding-top: 50px;
+	text-align: center;
+	font-family: Arial, sans-serif;
+	font-size: 30px;
+	font-weight:bold;
+	background-color: #eca400;
+	width: 400px;
+	padding: 10px 5px;
+	text-transform: uppercase;
+	color:#000;
+}
+.photorow {
+	margin: 0 auto;
+  padding: 60px 0;
+}
+
+.photocell{
+	display: inline-block;
+	width: 24%;
+	min-width: 200px;
+  margin: 20px auto;
+  overflow: hidden;
+  
+}
+.photo{
+	width: 200px;
+	height: 200px;
+	margin: 0 auto;
+  border-radius: 50%;
+  background: #eca400;
+}
+
+.photo-1:hover {
+  background: url('../img/person/img_1.jpg');
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.photo-2:hover {
+  background: url('../img/person/img_2.jpg');
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.photo-3:hover {
+  background: url('../img/person/img_3.jpg');
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.photo-4:hover {
+  background: url('../img/person/img_4.jpg');
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.photorow h4 {
+    color: #000;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 43% 0%;
+    font-family: 'Arial', sans-serif;
+}
+
+.photorow h4:hover {
+    opacity:0;
+}
+
+/*Стилі для футера*/
+
+footer {
+    background:#d00000;
+    height:100px;
+}
+
+#copy {
+    margin:0 auto;
+    padding:35px 0;
+    text-align:center;
+    font-size: 18px;
+    font-weight: bold;
+    color:#eca400;
+    text-shadow: 0 0 5px #000;
+}
