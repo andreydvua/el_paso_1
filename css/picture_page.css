@@ -1,0 +1,244 @@
+.pic_page{
+	background-image:url('../img/background.png');
+    width: 100%;
+    height: 750px;
+}
+
+/*Стилі для хідера*/
+
+header{
+    height: 120px;
+    background: #D73600 ;
+    border-bottom: 1px solid #000;
+}
+header h2{
+	color: #EAF8BF;
+    font-size:32px;
+    text-align:left;
+    padding:10px 50px;
+    text-shadow: 3px 3px 3px #1C1C1D;
+    text-transform: uppercase;
+}
+.buttons{
+    margin-left: 50px;
+    display: inline-block;
+}
+.button{
+    padding: 3px 8px;
+    display: inline-block;
+    border: 2px solid #D73600;
+    margin: 5px 5px 5px 20px;
+    text-transform: uppercase;
+    font-size:16px;
+}
+.button:hover{
+    padding: 3px 8px;
+    display: inline-block;
+    border: 2px solid #EAF8BF;
+    margin: 5px 5px 5px 20px;
+	text-transform: uppercase;
+}
+.button h4{
+    color: #EAF8BF;
+}
+.text{
+    margin-right: 10px;
+    display: inline-block;
+    float: right;
+    padding: 10px 5px 0 5px;
+    font-size:16px;
+}
+.text h4{
+    color: #ECA400;
+    padding: 5px 10px 0 0;
+} 
+/*Стилі для фото*/
+img{
+    display: block;
+    margin: 25px auto;
+    border-radius: 2px;
+}
+
+/*Стилі для футера*/
+
+footer{
+    background: #1C1C1D;
+    height:100px;
+}
+.footer{
+    padding:35px 30px;
+}
+#el_paso{
+    color: #EAF8BF;
+    float: left;
+    font-size:16px;
+}
+.footer #copy{
+    text-align:center;
+    color: #EAF8BF;
+    padding: 0 130px 0 0;
+    font-size:16px;
+}
+b{
+    color: #ECA400;
+    text-transform: uppercase;
+}
+
+/*Стиль для адаптивності*/
+
+@media screen and (min-width:768px) and (max-width:1024px){
+    .pic_page{
+    background-image:url('../img/background.png');
+    height: 700px;
+    }
+    header{
+    height: 90px;
+    background: #D73600 ;
+    border-bottom: 1px solid #000;
+    }
+    header h2{
+    color: #EAF8BF;
+    font-size:24px;
+    text-align:left;
+    padding:10px 35px;
+    text-shadow: 3px 3px 3px #1C1C1D;
+    text-transform: uppercase;
+    }
+    .buttons{
+    margin-left: 35px;
+    display: inline-block;
+    }
+    .button{
+    padding: 3px 8px;
+    display: inline-block;
+    border: 2px solid #D73600;
+    margin: 0px 5px 5px 20px;
+    text-transform: uppercase;
+    font-size:12px;
+    }
+    .button:hover{
+    padding: 3px 8px;
+    display: inline-block;
+    border: 2px solid #EAF8BF;
+    margin: 0px 5px 5px 20px;
+    text-transform: uppercase;
+    }
+    .button h4{
+    color: #EAF8BF;
+    }
+    .text{
+    margin-right: 10px;
+    display: inline-block;
+    float: right;
+    padding: 5px 5px 5px 5px;
+    font-size:12px;
+    }
+    .text h4{
+    color: #ECA400;
+    padding: 5px 10px 0 0;
+    } 
+    footer{
+    background: #1C1C1D;
+    height:90px;
+    }
+    .footer{
+    padding:35px 30px;
+    }
+    #el_paso{
+    color: #EAF8BF;
+    float: left;
+    font-size:12px;
+    }
+    .footer #copy{
+    text-align:center;
+    color: #EAF8BF;
+    padding: 0 120px 0 0;
+    font-size:12px;
+    }
+    b{
+    color: #ECA400;
+    text-transform: uppercase;
+    }
+}
+@media screen and (min-width:120px) and (max-width:767px){
+    .pic_page{
+    background-image:url('../img/background.png');
+    min-width: 480px;
+    height: 600px;
+    }
+    header{
+    height: 80px;
+    background: #D73600 ;
+    border-bottom: 1px solid #000;
+    }
+    header h2{
+    color: #EAF8BF;
+    font-size:16px;
+    text-align:left;
+    padding:10px 15px;
+    text-shadow: 3px 3px 3px #1C1C1D;
+    text-transform: uppercase;
+    }
+    .buttons{
+    margin-left: 10px;
+    display: inline-block;
+    }
+    .button{
+    padding: 3px 8px;
+    display: inline-block;
+    border: 2px solid #D73600;
+    margin: 0px 5px 5px 1px;
+    text-transform: uppercase;
+    font-size: 10px;
+    }
+    .button:hover{
+    padding: 3px 8px;
+    display: inline-block;
+    border: 2px solid #EAF8BF;
+    margin: 0 5px 5px 1px;
+    text-transform: uppercase;
+    }
+    .button h4{
+    color: #EAF8BF;
+    }
+    .text{
+    margin-right: 10px;
+    display: inline-block;
+    float: right;
+    padding: 10px 5px 0 5px;
+    font-size: 8px;
+    }
+    .text h4{
+    color: #ECA400;
+    padding: 5px 10px 0 0;
+    } 
+    img{
+    width: 400px;
+    height: 400px;
+    display: block;
+    margin: 25px auto;
+    border-radius: 2px;
+    }
+    footer{
+    background: #1C1C1D;
+    height:80px;
+    }
+    .footer{
+    padding:30px 30px;
+    }
+    #el_paso{
+    color: #EAF8BF;
+    float: left;
+    font-size:10px;
+    }
+    .footer #copy{
+    text-align:center;
+    color: #EAF8BF;
+    padding: 0 90px 0 0;
+    font-size:10px;
+    }
+    b{
+    color: #ECA400;
+    text-transform: uppercase;
+    }
+}
