@@ -11,7 +11,7 @@ header h2{
 }
 .main{
 	padding-bottom: 45px;
-	background: url('../img/header_bg.jpg') no-repeat;
+	background: url('../img/bg.jpg') no-repeat;
 	-webkit-background-size: cover;
 	background-size: cover;
 }
