@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="description" content=""/>
+	<meta name="keywords" content=""/>
+	<title>Chapter_Name page</title>
+	<link rel="stylesheet" href="../css/reset.css"/>
+	<link rel="stylesheet" href="../css/chapter_style.css"/>
+</head>
+<body>
+		<div class="basic">  
+		<header>
+		<h2>Kinds of Enterprise Application</h2>
+		</header>
+		<section>
+			<div class="chapter">;
+			<a href="../index.html">
+					<div class="block-m">	
+						<div class="home">
+							<h3>Home</h3>
+						</div>
+					</div>		
+			</a>
+			<a href="../chapters/architecture.html"">			
+						<div class="block-m">
+							<div class="arch">
+							<h3>Architecture</h3>
+							</div>
+						</div>
+			</a>
+			<a href="../chapters/making a choise.html">
+						<div class="block-m">	
+							<div class="making">
+							<h3>Making a Choise</h3>
+							</div>
+						</div>	
+			</a>	
+			<a href="../chapters/view patterns.html">
+						<div class="block-m">
+							<div class="view">
+							<h3>View Patterns</h3>
+							</div>
+						</div>	
+			</a>
+			<a href="../chapters/concurency problems.html">
+						<div class="block-m">		
+							<div class="concurency">
+							<h3>Concurency Problems</h3>
+							</div>
+						</div>
+			</a>
+			<a href="../chapters/application server concurrency.html">
+						<div class="block-m">	
+							<div class="application">
+							<h3>Application Server Concurrency</h3>
+							</div>
+						</div>
+			</a>
+			<a href="../chapters/session state.html">													
+						<div class="block-m">
+							<div class="session">
+							<h3>Session State</h3>
+							</div>
+						</div>
+			</a>
+			<a href="../chapters/Optimistic and Pessimistic Concurrency.html">			
+						<div class="block-m">	
+							<div class="optimistic">
+							<h3>Optimistic and Pessimistic Concurrency</h3>
+							</div>
+						</div>
+			</a>
+			</div>
+			<br>
+			<p><span>Application Server Concurrency</span></p>
+			<br>
+			<p>So far we've talked about concurrency mainly in terms of multiple sessions running against a shared data
+source. Another form of concurrency is the process concurrency of the application server itself: How does
+that server handle multiple requests concurrently and how does this affect the design of the application on
+the server? The big difference from the other concurrency issues we've talked about so far is that application
+server concurrency doesn't involve transactions, so working with them means stepping away from the
+relatively controlled transactional world.<p/>
+			<p>Explicit multithreaded programming, with locks and synchronization blocks, is complicated to do well. It's
+easy to introduce defects that are very hard to find—concurrency bugs are almost impossible to
+reproduce—resulting in a system that works correctly 99 percent of the time but throws random fits. Such
+software is incredibly frustrating to use and debug, so our policy is to avoid the need for explicit handling of
+synchronization and locks as much as possible. Application developers should almost never have to deal with
+these explicit concurrency mechanisms.</p>
+			<p>The simplest way to handle this is to use process-per-session,where each session runs in its own process.
+Its great advantage is that the state of each process is completely isolated from the other processes so
+application programmers don't have to worry at all about multithreading. As far as memory isolation goes,
+it's almost equally effective to have each request start a new process or to have one process tied to the
+session that's idle between requests. Many early Web systems would start a new Perl process for each
+request.</p>
+			<p>The problem with process-per-session is that it uses up a lot resources, since processes are expensive
+beasties. To be more efficient you can pool the processes, such that each one only handles a single request
+at one time but can handle multiple requests from different sessions in a sequence. This approach of pooled
+process-per-requestwill use many fewer processes to support a given number of sessions. Your isolation
+is almost as good: You don't have many of the nasty multithreading issues. The main problem over processper-session 
+is that you have to ensure that any resources used to handle a request are released at the end
+of the request. The current Apache mod-perl uses this scheme, as do a lot of serious large-scale transaction
+processing systems.<p/>
+			<p>Even process-per-request will need many processes running to handle a reasonable load. You can further
+improve throughput by having a single process run multiple threads. With this thread-per-request
+approach, each request is handled by a single thread within a process. Since threads use much fewer server
+resources than a process, you can handle more requests with less hardware this way, so your server is more
+efficient. The problem with using thread-per-request is that there's no isolation between the threads and any
+thread can touch any piece of data that it can get access to.</p>
+			<p>In our view there's a lot to be said for using process-per-request. Although it's less efficient than thread-perrequest,
+ using process-per-request is equally scalable. You also get better robustness—if one thread goes
+haywire it can bring down an entire process, so using process-per-request limits the damage. Particularly
+with a less experienced team, the reduction of threading headaches (and the time and cost of fixing bugs) is
+worth the extra hardware costs. We find that few people actually do any performance testing to assess the
+relative costs of thread-per-request and process-per-request for their application.<p/>
+			<p>Some environments provide a middle ground of allowing isolated areas of data to be assigned to a single
+thread. COM does this with the single-threaded apartment, and J2EE does it with Enterprise Java Beans (and
+will in the future with isolates). If your platform has something like this available, it can allow you to have
+your cake and eat it—whatever that means.<p/>
+			<p>If you use thread-per-request, the most important thing is to create and enter an isolated zone where
+application developers can mostly ignore multithreaded issues. The usual way to do this is to have the
+thread create new objects as it starts handling the request and to ensure that these objects aren't put
+anywhere (such as in a static variable) where other threads can see them. That way the objects are isolated
+because other threads have no way of referencing them.</p>
+			<p>Many developers are concerned about creating new objects because they've been told that object creation is
+an expensive process. As a result they often pool objects. The problem with pooling is that you have to
+synchronize access to the pooled objects in some way. But the cost of object creation is very dependent on
+the virtual machine and memory management strategies. In modern environments object creation is actually
+pretty fast [Peckish]. (Off the top of your head: how many Java date objects do you think we can create in
+one second on Martin's 600Mhz P3 with Java 1.3? We'll tell you later.) Creating fresh objects for each session
+avoids a lot of concurrency bugs and can actually improve scalability.</p>
+			<p>While this tactic works in many cases, there are still some areas that developers need to avoid. One is static,
+class-based variables or global variables because any use of these has to be synchronized. This is also true
+of singletons. If you need some kind of global memory, use a Registry(480),which you can implement in
+such a way that it looks like a static variable but actually uses thread-specific storage.</p>
+			<p>Even if you're able to create objects for the session, and thus make a comparatively safe zone, some objects
+are expensive to create and thus need to be handled differently—the most common example of this is a
+database connection. To deal with this you can place these objects in an explicit pool where you acquire a
+connection while you need it and return it when done. These operations will need to be synchronized.<p/>
+		</div>	
+		</section>																									<!--Footer-->    
+	<footer>
+       <div id="copy">
+          Copyright @ 2016 | Design: EL_PASO
+       </div> 
+    </footer>    	
+</body>
+</html>
