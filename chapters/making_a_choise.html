@@ -8,82 +8,50 @@
 	<link rel="stylesheet" href="../css/reset.css"/>
 	<link rel="stylesheet" href="../css/chapter_style.css"/>
 </head>
-<body>
-		<div class="basic">  
-		<header>
-		<h2>Kinds of Enterprise Application</h2>
-		</header>
-		<section>
-			<div class="chapter">;
-			<a href="../index.html">
-					<div class="block-m">	
-						<div class="home">
-							<h3>Home</h3>
-						</div>
-					</div>		
-			</a>
-			<a href="../chapters/architecture.html"">			
-						<div class="block-m">
-							<div class="arch">
-							<h3>Architecture</h3>
-							</div>
-						</div>
-			</a>
-			<a href="../chapters/making a choise.html">
-						<div class="block-m">	
-							<div class="making">
-							<h3>Making a Choise</h3>
-							</div>
-						</div>	
-			</a>	
-			<a href="../chapters/view patterns.html">
-						<div class="block-m">
-							<div class="view">
-							<h3>View Patterns</h3>
-							</div>
-						</div>	
-			</a>
-			<a href="../chapters/concurency problems.html">
-						<div class="block-m">		
-							<div class="concurency">
-							<h3>Concurency Problems</h3>
-							</div>
-						</div>
-			</a>
-			<a href="../chapters/application server concurrency.html">
-						<div class="block-m">	
-							<div class="application">
-							<h3>Application Server Concurrency</h3>
-							</div>
-						</div>
-			</a>
-			<a href="../chapters/session state.html">													
-						<div class="block-m">
-							<div class="session">
-							<h3>Session State</h3>
-							</div>
-						</div>
-			</a>
-			<a href="../chapters/Optimistic and Pessimistic Concurrency.html">			
-						<div class="block-m">	
-							<div class="optimistic">
-							<h3>Optimistic and Pessimistic Concurrency</h3>
-							</div>
-						</div>
-			</a>
-			</div>
-			<br>
-			<p><span>Making a Choice</span></p>
-			<br>
-			<p>So, how do you choose between the three patterns? It's not an easy choice, and it very much depends on
+<body>  
+	<header>
+		<h2 id="#top">Making a Choice</h2>
+	</header>
+	  <div class="arrow">
+    <a href="#top" title="go on top"></a>
+  </div>
+	<nav>
+		<ul>
+			<li>
+				<a href="../index.html">Home</a>
+			</li>
+			<li>
+				<a href="architecture.html">Architecture</a>
+			</li>
+			<li>
+				<a href="view_patterns.html">View Patterns</a>
+			</li>
+			<li>
+				<a href="concurency_problems.html">Concurency Problems</a>
+			</li>
+			<li>
+				<a href="application_server_concurrency.html">Application Server Concurrency</a>
+			</li>
+			<li>
+				<a href="session_state.html">Session State</a>
+			</li>
+			<li>
+				<a href="Optimistic_and_Pessimistic_Concurrency.html">Optimistic and Pessimistic Concurrency</a>
+			</li>
+			<li>
+				<a href="#">Kings of enterprise application</a>
+			</li>
+		</ul>	
+	</nav>
+	<main>
+		<p>So, how do you choose between the three patterns? It's not an easy choice, and it very much depends on
 how complex your domain logic is. Figure 2.4is one of those nonscientific graphs that really irritate me in
 PowerPoint presentations because they have utterly unquantified axes. However, it helps to visualize my
 sense of how the three compare. With simple domain logic the Domain Model(116)is less attractive because
 the cost of understanding it and the complexity of the data source add a lot of effort to developing it that
 won't be paid back. Nevertheless, as the complexity of the domain logic increases, the other approaches
 tend to hit a wall where adding more features becomes exponentially more difficult.</p>
-			<h4>Figure 2.4. A sense of the relationships between complexity and effort for different domain logic styles.</h4>
-			<img src="../pictures/view_6.png" height="405" width="566">
+			<a href="../pictures/Making_a_Choice_6.html"><img src="../pictures/view_6.gif" alt="A sense of the relationships between"></a>
 			<p>Your problem, of course, is to figure out where on that xaxis your application lies. The good news is that I
 can say that you should use a  Domain Model(116)whenever the complexity of your domain logic is greater
 than 7.42. The bad news is that nobody knows how to measure the complexity of domain logic. In practice,
@@ -103,7 +71,7 @@ started with Transaction Script(110),don't hesitate to refactor toward Domain Mo
 with Domain Model(116),however, going to Transaction Script(110)is usually less worthwhile unless you
 can simplify your data source layer.</p>
 			<p>These three patterns are not mutually exclusive choices. Indeed, it's quite common to use Transaction Script
-(110)for some of the domain logic and Table Module(125)or Domain Model(116)for the rest.<p/>
+(110)for some of the domain logic and Table Module(125)or Domain Model(116)for the rest.</p>
 			<p>A common approach in handling domain logic is to split the domain layer in two. A  Service Layer(133)is
 placed over an underlying Domain Model(116)or Table Module(125).Usually you only get this with a
 Domain Model(116)or Table Module(125)since a domain layer that uses only  Transaction Script(110)isn't
@@ -143,12 +111,11 @@ approach is to assume that I don't need one and only add it if it seems that the
 However, I know many good designers who always use a Service Layer(133)with a fair bit of logic, so feel
 free to ignore me on this one. Randy Stafford has had a lot of success with a rich  Service Layer(133),which
 is why I asked him to write the Service Layer(133)pattern for this book.</p>
-		</div>	
-		</section>																									<!--Footer-->    
+	</main>   
 	<footer>
-       <div id="copy">
-          Copyright @ 2016 | Design: EL_PASO
-       </div> 
-    </footer>    	
+    <div id="copy">
+      Copyright &cope; 2016 | Design: EL_PASO
+    </div> 
+  </footer>    	
 </body>
 </html>

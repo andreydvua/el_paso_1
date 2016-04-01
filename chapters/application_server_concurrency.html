@@ -8,79 +8,48 @@
 	<link rel="stylesheet" href="../css/reset.css"/>
 	<link rel="stylesheet" href="../css/chapter_style.css"/>
 </head>
-<body>
-		<div class="basic">  
-		<header>
-		<h2>Kinds of Enterprise Application</h2>
-		</header>
-		<section>
-			<div class="chapter">;
-			<a href="../index.html">
-					<div class="block-m">	
-						<div class="home">
-							<h3>Home</h3>
-						</div>
-					</div>		
-			</a>
-			<a href="../chapters/architecture.html"">			
-						<div class="block-m">
-							<div class="arch">
-							<h3>Architecture</h3>
-							</div>
-						</div>
-			</a>
-			<a href="../chapters/making a choise.html">
-						<div class="block-m">	
-							<div class="making">
-							<h3>Making a Choise</h3>
-							</div>
-						</div>	
-			</a>	
-			<a href="../chapters/view patterns.html">
-						<div class="block-m">
-							<div class="view">
-							<h3>View Patterns</h3>
-							</div>
-						</div>	
-			</a>
-			<a href="../chapters/concurency problems.html">
-						<div class="block-m">		
-							<div class="concurency">
-							<h3>Concurency Problems</h3>
-							</div>
-						</div>
-			</a>
-			<a href="../chapters/application server concurrency.html">
-						<div class="block-m">	
-							<div class="application">
-							<h3>Application Server Concurrency</h3>
-							</div>
-						</div>
-			</a>
-			<a href="../chapters/session state.html">													
-						<div class="block-m">
-							<div class="session">
-							<h3>Session State</h3>
-							</div>
-						</div>
-			</a>
-			<a href="../chapters/Optimistic and Pessimistic Concurrency.html">			
-						<div class="block-m">	
-							<div class="optimistic">
-							<h3>Optimistic and Pessimistic Concurrency</h3>
-							</div>
-						</div>
-			</a>
-			</div>
-			<br>
-			<p><span>Application Server Concurrency</span></p>
-			<br>
-			<p>So far we've talked about concurrency mainly in terms of multiple sessions running against a shared data
+<body> 
+	<header>
+		<h2 id="top">Application Server Concurrency</h2>
+	</header>
+	  <div class="arrow">
+    <a href="#top" title="go on top"></a>
+  </div>
+	<nav>
+		<ul>
+			<li>
+				<a href="../index.html">Home</a>
+			</li>
+			<li>
+				<a href="architecture.html">Architecture</a>
+			</li>
+			<li>
+				<a href="making_a_choise.html">Making a Choise</a>
+			</li>
+			<li>
+				<a href="view_patterns.html">View Patterns</a>
+			</li>
+			<li>
+				<a href="concurency_problems.html">Concurency Problems</a>
+			</li>
+			<li>
+				<a href="session_state.html">Session State</a>
+			</li>
+			<li>
+				<a href="Optimistic_and_Pessimistic_Concurrency.html">Optimistic and Pessimistic Concurrency</a>
+			</li>
+			<li>
+				<a href="#">Kings of enterprise application</a>
+			</li>
+		</ul>
+	</nav>
+	<main>		
+		<p>So far we've talked about concurrency mainly in terms of multiple sessions running against a shared data
 source. Another form of concurrency is the process concurrency of the application server itself: How does
 that server handle multiple requests concurrently and how does this affect the design of the application on
 the server? The big difference from the other concurrency issues we've talked about so far is that application
 server concurrency doesn't involve transactions, so working with them means stepping away from the
-relatively controlled transactional world.<p/>
+relatively controlled transactional world.</p>
 			<p>Explicit multithreaded programming, with locks and synchronization blocks, is complicated to do well. It's
 easy to introduce defects that are very hard to find—concurrency bugs are almost impossible to
 reproduce—resulting in a system that works correctly 99 percent of the time but throws random fits. Such
@@ -100,7 +69,7 @@ process-per-requestwill use many fewer processes to support a given number of se
 is almost as good: You don't have many of the nasty multithreading issues. The main problem over processper-session 
 is that you have to ensure that any resources used to handle a request are released at the end
 of the request. The current Apache mod-perl uses this scheme, as do a lot of serious large-scale transaction
-processing systems.<p/>
+processing systems.</p>
 			<p>Even process-per-request will need many processes running to handle a reasonable load. You can further
 improve throughput by having a single process run multiple threads. With this thread-per-request
 approach, each request is handled by a single thread within a process. Since threads use much fewer server
@@ -112,11 +81,11 @@ thread can touch any piece of data that it can get access to.</p>
 haywire it can bring down an entire process, so using process-per-request limits the damage. Particularly
 with a less experienced team, the reduction of threading headaches (and the time and cost of fixing bugs) is
 worth the extra hardware costs. We find that few people actually do any performance testing to assess the
-relative costs of thread-per-request and process-per-request for their application.<p/>
+relative costs of thread-per-request and process-per-request for their application.</p>
 			<p>Some environments provide a middle ground of allowing isolated areas of data to be assigned to a single
 thread. COM does this with the single-threaded apartment, and J2EE does it with Enterprise Java Beans (and
 will in the future with isolates). If your platform has something like this available, it can allow you to have
-your cake and eat it—whatever that means.<p/>
+your cake and eat it—whatever that means.</p>
 			<p>If you use thread-per-request, the most important thing is to create and enter an isolated zone where
 application developers can mostly ignore multithreaded issues. The usual way to do this is to have the
 thread create new objects as it starts handling the request and to ensure that these objects aren't put
@@ -136,13 +105,12 @@ such a way that it looks like a static variable but actually uses thread-specifi
 			<p>Even if you're able to create objects for the session, and thus make a comparatively safe zone, some objects
 are expensive to create and thus need to be handled differently—the most common example of this is a
 database connection. To deal with this you can place these objects in an explicit pool where you acquire a
-connection while you need it and return it when done. These operations will need to be synchronized.<p/>
-		</div>	
-		</section>																									<!--Footer-->    
+connection while you need it and return it when done. These operations will need to be synchronized.</p>
+	</main>
 	<footer>
-       <div id="copy">
-          Copyright @ 2016 | Design: EL_PASO
-       </div> 
-    </footer>    	
+    <div id="copy">
+      Copyright @ 2016 | Design: EL_PASO
+    </div> 
+  </footer>    	
 </body>
 </html>
